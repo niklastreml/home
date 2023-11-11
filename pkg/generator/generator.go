@@ -76,7 +76,6 @@ func (g *Generator) Generate(ctx context.Context, out string) error {
 	return nil
 }
 
-// TODO add a way to add static files to the generator
 func (g *Generator) AddStatic(url, path string) {
 	g.staticFiles[url] = path
 
