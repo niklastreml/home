@@ -11,6 +11,7 @@ func main() {
 	g := generator.New()
 	g.Layout(pages.Layout)
 	g.Add("index.html", pages.Index())
+	g.AddStatic("/static", "static")
 	if err := g.Generate(context.Background(), "tmp/build"); err != nil {
 		panic(err)
 	}
