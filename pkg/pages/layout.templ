@@ -6,10 +6,17 @@ templ Layout(children templ.Component) {
 			<title>My App</title>
 			<meta charset="UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-			<script src="https://unpkg.com/htmx.org@1.9.8" integrity="sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr" crossorigin="anonymous"></script>
-			<script src="https://cdn.tailwindcss.com"></script>
+			<script src="/static/js/htmx.org@1.9.8" integrity="sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr" crossorigin="anonymous"></script>
+			<script src="/static/js/tailwind.js"></script>
+			<link href="/static/css/fonts.css" rel="stylesheet"/>
+			<style>
+				.font-custom{
+					font-family: "Lato", sans-serif;
+
+				}
+			</style>
 		</head>
-		<body class="text-gray-800 bg-gradient-to-b from-blue-200 to-blue-400 dark:text-gray-50 dark:bg-gray-800 dark:from-slate-900 dark:to-sky-900">
+		<body class="font-custom text-gray-800 bg-gradient-to-b from-blue-200 to-blue-400 dark:text-gray-50 dark:bg-gray-800 dark:from-slate-900 dark:to-sky-900">
 			<div id="content">
 				<div class="fixed w-full">
 					<header class="p-4 backdrop-filter backdrop-blur-md">
@@ -22,7 +29,7 @@ templ Layout(children templ.Component) {
 					</header>
 				</div>
 				@children
-				<footer class="text-white text-center py-4">
+				<footer class="text-center py-4">
 					<p>&copy; 2023 Niklas Treml - All rights reserved</p>
 				</footer>
 			</div>
