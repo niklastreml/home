@@ -40,6 +40,10 @@ func (g *Generator) Generate(ctx context.Context, out string) error {
 
 	for path, component := range g.pages {
 		dest := filepath.Join(out, path)
+		if err := os.MkdirAll(filepath.Dir(dest), 0755); err != nil {
+			return fmt.Errorf("%w: %v", ErrFolderCreate, err)
+		}
+
 		f, err := os.Create(dest)
 		if err != nil {
 			return fmt.Errorf("%w: %v", ErrFileWrite, err)
@@ -58,3 +62,4 @@ func (g *Generator) Generate(ctx context.Context, out string) error {
 
 var ErrFileWrite = fmt.Errorf("failed to write to file")
 var ErrFileCreate = fmt.Errorf("failed to create file")
+var ErrFolderCreate = fmt.Errorf("failed to create parent folders")
