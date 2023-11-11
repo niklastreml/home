@@ -11,8 +11,8 @@ templ Index() {
 					<h2 class="text-4xl  mb-10">Hi there I'm <span class="font-bold">Niklas Treml</span></h2>
 					<p class="text-lg">DevOps Engineer at Deutsche Telekom IT GmbH. </p>
 					<p class="text-lg">I'm all about Kubernetes and Software Development</p>
+					<p class="text-lg">Feel free to explore my projects on github and check out my professional experience below.</p>
 				</div>
-				<p class="text-lg">Feel free to explore my projects on github and check out my professional experience below.</p>
 				<div>
 					<div class="flex flex-wrap items-center justify-center space-x-4">
 						<div class="mr-8">
@@ -45,7 +45,7 @@ templ Index() {
 				</div>
 			</div>
 		}
-		@Section() {
+		<section class="h-screen flex items-center justify-center flex-col">
 			@ExperienceSection("Professional Experience") {
 				@Experience("DevOps Engineer at Deutsche Telekom IT GmbH", 
 				`Rejoined the Container-as-a-Service team as a full-time employee after shortening my apprenticeship to 2.5 years. 
@@ -56,7 +56,7 @@ templ Index() {
 				@Experience("MyIT - Internal Workplace Ordering System","Engaged in a team managing and enhancing the internal workplace ordering system, akin to a webshop for employees to request necessary hardware and software. Focused on automating ordering workflows to streamline and reduce manual labor involved in the process.","Feb 2021 - 2022","")
 				@Experience("Container as a Service (CaaS) Team - Kubernetes & Docker","Contributed within the Container as a Service (CaaS) team, dedicated to an internal Kubernetes platform. Acquired comprehensive knowledge in programming, Kubernetes, and Docker, enriching my expertise in the domain.","Sep 2019 - Feb 2021","Deutsche Telekom Ausbildung")
 			}
-		}
+		</section>
 	</main>
 }
 

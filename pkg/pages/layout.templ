@@ -16,21 +16,29 @@ templ Layout(children templ.Component) {
 				}
 			</style>
 		</head>
-		<body class="font-custom text-gray-800 bg-gradient-to-b from-blue-200 to-blue-400 dark:text-gray-50 dark:bg-gray-800 dark:from-slate-900 dark:to-sky-900">
+		<body class="font-custom text-gray-800 bg-gradient-to-b from-blue-200 to-blue-400 dark:text-gray-50 dark:bg-gray-800 dark:from-indigo-900 dark:to-slate-900">
 			<div id="content">
 				<div class="fixed w-full">
 					<header class="p-4 backdrop-filter backdrop-blur-md">
 						<div class="container mx-auto flex justify-between items-center">
 							<h1 class="text-3xl font-bold">Niklas Treml</h1>
 							<nav>
-								<a href="/projects" class="hover:underline">Projects</a>
+								<a href="https://github.com/NiklasTreml" class="hover:underline ml-2">Github</a>
+								<a href="/projects" class="hover:underline ml-2">Projects</a>
 							</nav>
 						</div>
 					</header>
 				</div>
 				@children
-				<footer class="text-center py-4">
+				<footer class="py-4 flex mx-2 justify-between">
+					<p></p>
 					<p>&copy; 2023 Niklas Treml - All rights reserved</p>
+					<span>
+						Powered by 
+						<a href="https://templ.guide" class="">
+							templ <img src="/static/images/templ.svg" alt="templ" class="h-8 w-8 inline"/>
+						</a>
+					</span>
 				</footer>
 			</div>
 		</body>
