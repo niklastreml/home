@@ -9,9 +9,22 @@ templ Layout(children templ.Component) {
 			<script src="https://unpkg.com/htmx.org@1.9.8" integrity="sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr" crossorigin="anonymous"></script>
 			<script src="https://cdn.tailwindcss.com"></script>
 		</head>
-		<body class="dark:bg-gray-800 dark:text-gray-50">
+		<body class="text-gray-800 bg-gradient-to-b from-blue-200 to-blue-400 dark:text-gray-50 dark:bg-gray-800 dark:from-slate-900 dark:to-sky-900">
 			<div id="content">
+				<div class="fixed w-full">
+					<header class="p-4 backdrop-filter backdrop-blur-md">
+						<div class="container mx-auto flex justify-between items-center">
+							<h1 class="text-3xl font-bold">Niklas Treml</h1>
+							<nav>
+								<a href="/projects" class="hover:underline">Projects</a>
+							</nav>
+						</div>
+					</header>
+				</div>
 				@children
+				<footer class="text-white text-center py-4">
+					<p>&copy; 2023 Niklas Treml - All rights reserved</p>
+				</footer>
 			</div>
 		</body>
 	</html>
