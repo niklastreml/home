@@ -9,16 +9,16 @@ templ Index() {
 				<div></div>
 				<div>
 					<h2 class="text-4xl mb-10">Hi there I'm <span class="font-bold">Niklas Treml</span></h2>
-					<p class="text-lg">DevOps Engineer at Deutsche Telekom IT GmbH. </p>
-					<p class="text-lg">I'm all about Kubernetes and Software Development</p>
-					<p class="text-lg">Feel free to explore my projects on github and check out my professional experience below.</p>
+					<p class="text-lg mb-4">DevOps Engineer at Deutsche Telekom IT GmbH</p>
+					<p class="text-lg mb-4">I'm all about Kubernetes and Software Development</p>
+					<p class="text-lg mb-4">Feel free to explore my projects on github and check out my professional experience below</p>
 				</div>
 				<div>
 					<div class="flex flex-wrap items-center justify-center space-x-4">
-						<div class="mr-8">
+						<div class="mr-8 hover:scale-110 transition-all">
 							@TechImage("/static/images/linkedin.svg", "LinkedIn", "https://www.linkedin.com/in/niklas-treml/")
 						</div>
-						<div class="ml-8">
+						<div class="ml-8 hover:scale-110 transition-all">
 							@TechImage("/static/images/github.svg", "GitHub", "https://github.com/NiklasTreml")
 						</div>
 					</div>
@@ -84,7 +84,7 @@ templ Section() {
 }
 
 templ TechImage(src, name, link string) {
-	<a href={ templ.URL(link) } class="m-1">
+	<a href={ templ.URL(link) } class="m-1 hover:scale-110 hover:shadow-lg p-1 rounded hover:backdrop-blur-lg transition-all">
 		<img src={ src } alt={ name } class="h-16 w-16"/>
 	</a>
 }
