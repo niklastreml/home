@@ -16,10 +16,11 @@ jobs:
           go install github.com/a-h/templ/cmd/templ@latest
           templ generate
           go run ./cmd/generate
+          ls -la tmp/build
       - name: Upload artifacts
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./tmp/build/
+          path: tmp/build/
 
     # <Not provided for brevity>
     # At a minimum this job should upload artifacts using actions/upload-pages-artifact
