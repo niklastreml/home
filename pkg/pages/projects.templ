@@ -3,7 +3,6 @@ package pages
 import "github.com/google/go-github/v56/github"
 
 templ Projects(projects []*github.Repository) {
-	<div class="h-20"></div>
 	<div class="flex flex-wrap justify-center">
 		for _, project := range projects {
 			@ProjectCard(project)

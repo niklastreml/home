@@ -6,8 +6,8 @@ templ Layout(children templ.Component) {
 			<title>Niklas Treml</title>
 			<meta charset="UTF-8"/>
 			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-			<script src="/static/js/htmx.org@1.9.8" integrity="sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr" crossorigin="anonymous"></script>
 			<script src="/static/js/tailwind.js"></script>
+			<script defer src="/static/js/alpine.js"></script>
 			<link href="/static/css/fonts.css" rel="stylesheet"/>
 			<style>
 				.font-custom{
@@ -18,14 +18,26 @@ templ Layout(children templ.Component) {
 		</head>
 		<body class="font-custom text-gray-800 bg-gradient-to-b from-blue-200 to-blue-400 dark:text-gray-50 dark:bg-gray-800 dark:from-indigo-900 dark:to-slate-900">
 			<div id="content">
-				<div class="fixed w-full">
-					<header class="p-4 backdrop-filter backdrop-blur-md">
+				<div class="top-0 sticky w-full">
+					<header x-data="{open: false}" class="p-4 backdrop-filter backdrop-blur-md font-mono">
 						<div class="container mx-auto flex justify-between items-center">
-							<h1 class="text-3xl font-bold hover:scale-110 transition-all"><a href="/">Niklas Treml</a></h1>
+							<h1 class="text-xl sm:text-3xl font-bold hover:scale-110 transition-all"><a href="/">Niklas Treml</a></h1>
 							<nav>
-								<a href="https://github.com/NiklasTreml" class="hover:underline ml-2">Github</a>
-								<a href="/projects.html" class="hover:underline ml-2">Projects</a>
+								<a href="mailto:treml.niklas@gmail.com" class="hidden sm:inline hover:underline ml-3 p-2 transition-all border border-green-400 shadow-lg">1. Contact</a>
+								<a href="https://github.com/NiklasTreml" class="hidden sm:inline hover:underline ml-3">2. Github</a>
+								<a href="/projects.html" class="hidden sm:inline hover:underline ml-3">3. Projects</a>
+								<button class="sm:hidden" @click="open = ! open">BGR </button>
 							</nav>
+							<div x-show="open" @click="open = false" class="h-screen w-screen absolute text-left top-0 left-0">
+								<div class="flex flex-row h-full">
+									<div class="h-full bg-slate-900 opacity-75 w-1/2 "></div>
+									<div class="h-full bg-gray-800 w-1/2 text-2xl pl-5">
+										<div class="mt-5 border-b"><a href="mailto:treml.niklas@gmail.com">1. Contact</a></div>
+										<div class="mt-5 border-b"><a href="https://github.com/NiklasTreml">2. Github</a></div>
+										<div class="mt-5 border-b"><a href="/projects.html">3. Projects</a></div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</header>
 				</div>
