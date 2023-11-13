@@ -1,5 +1,7 @@
 package pages
 
+import "github.com/niklastreml/home/pkg/icons"
+
 templ Layout(children templ.Component) {
 	<html>
 		<head>
@@ -24,6 +26,7 @@ templ Layout(children templ.Component) {
 							<h1 class="text-xl sm:text-3xl font-bold hover:scale-110 transition-all"><a href="/">Niklas Treml</a></h1>
 							<nav>
 								<a href="mailto:treml.niklas@gmail.com" class="hidden sm:inline hover:underline ml-3 p-2 transition-all border border-green-400 shadow-lg">1. Contact</a>
+								<a href="/projects.html" class="hidden sm:inline hover:underline ml-3">3. Projects</a>
 								<a href="https://github.com/NiklasTreml" class="hidden sm:inline hover:underline ml-3">2. Github</a>
 								<button class="sm:hidden" @click="open = ! open">
 									@icons.BurgerMenu("h-8 w-8 fill-blue-500")
@@ -32,7 +35,7 @@ templ Layout(children templ.Component) {
 							<div x-show="open" @click="open = false" class="h-screen w-screen absolute text-left top-0 left-0">
 								<div class="flex flex-row h-full">
 									<div class="h-full bg-slate-900 opacity-75 w-1/2 "></div>
-									<div class="h-full bg-gray-800 w-1/2 text-2xl pl-5">
+									<div class="h-full bg-slate-300 dark:bg-gray-800 w-1/2 text-2xl pl-5">
 										<div class="mt-5 border-b"><a href="mailto:treml.niklas@gmail.com">1. Contact</a></div>
 										<div class="mt-5 border-b"><a href="https://github.com/NiklasTreml">2. Github</a></div>
 										<div class="mt-5 border-b"><a href="/projects.html">3. Projects</a></div>
