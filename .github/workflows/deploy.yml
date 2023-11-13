@@ -1,4 +1,8 @@
-on: push
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: 0 0,12 * * *
 jobs:
   # Build job
   build:
