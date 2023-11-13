@@ -1,34 +1,29 @@
 package pages
 
-import "github.com/niklastreml/home/pkg/icons"
+// import "github.com/niklastreml/home/pkg/icons"
 
 templ Index() {
-	<main class="container mx-auto">
-		<section class="h-screen flex items-center justify-center text-center">
-			<div class="flex flex-col justify-between h-full">
-				<div></div>
-				<div>
-					<h2 class="text-4xl mb-10">Hi there I'm <span class="font-bold">Niklas Treml</span></h2>
-					<p class="text-lg mb-4">DevOps Engineer at Deutsche Telekom IT GmbH</p>
-					<p class="text-lg mb-4">I'm all about Kubernetes and Software Development</p>
-					<p class="text-lg mb-4">Feel free to explore my projects on github and check out my professional experience below</p>
+	<main class="mx-5">
+		<section class="h-screen flex justify-center items-center">
+			<div>
+				<div class="mb-10">
+					<p class="text-xl font-mono text-green-400 mb-5">Hi there, I'm </p>
+					<h2 class="text-5xl mb-4">
+						<p class="text-gray-100 font-bold">Niklas Treml</p>
+						<p class="text-gray-200 mb-4">I do Kubernetes and Programming</p>
+					</h2>
+					<p class="text-md text-gray-200 md:w-1/2">
+						I'm a DevOps Engineer at Deutsche Telekom IT operating and developing an internal kubernetes platform. 
+						Currently I'm working on the backend of our ordering tool and an infrastructure monitoring tool.
+					</p>
 				</div>
-				<div>
-					<div class="flex flex-wrap items-center justify-center space-x-4">
-						<div class="mr-8 hover:scale-110 transition-all">
-							@TechImage("/static/images/linkedin.svg", "LinkedIn", "https://www.linkedin.com/in/niklas-treml/")
-						</div>
-						<div class="ml-8 hover:scale-110 transition-all">
-							@TechImage("/static/images/github.svg", "GitHub", "https://github.com/NiklasTreml")
-						</div>
-					</div>
-				</div>
-				<div class="mb-4 flex justify-center items-center animate-bounce">
-					@icons.CaretDown()
+				<div class="flex justify-center items-center">
+					@TechImage("/static/images/linkedin.svg", "LinkedIn", "https://www.linkedin.com/in/niklas-treml/")
+					@TechImage("/static/images/github.svg", "GitHub", "https://github.com/NiklasTreml")
 				</div>
 			</div>
 		</section>
-		<section class="h-screen flex items-center justify-center flex-col">
+		<section class="flex items-center justify-center flex-col">
 			@ExperienceSection("Professional Experience") {
 				@Experience("DevOps Engineer at Deutsche Telekom IT GmbH", 
 				`Rejoined the Container-as-a-Service team as a full-time employee after shortening my apprenticeship to 2.5 years. 
