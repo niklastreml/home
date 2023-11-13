@@ -25,8 +25,9 @@ templ Layout(children templ.Component) {
 							<nav>
 								<a href="mailto:treml.niklas@gmail.com" class="hidden sm:inline hover:underline ml-3 p-2 transition-all border border-green-400 shadow-lg">1. Contact</a>
 								<a href="https://github.com/NiklasTreml" class="hidden sm:inline hover:underline ml-3">2. Github</a>
-								<a href="/projects.html" class="hidden sm:inline hover:underline ml-3">3. Projects</a>
-								<button class="sm:hidden" @click="open = ! open">BGR </button>
+								<button class="sm:hidden" @click="open = ! open">
+									@icons.BurgerMenu("h-8 w-8 fill-blue-500")
+								</button>
 							</nav>
 							<div x-show="open" @click="open = false" class="h-screen w-screen absolute text-left top-0 left-0">
 								<div class="flex flex-row h-full">
