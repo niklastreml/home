@@ -18,14 +18,14 @@ templ Layout(children templ.Component) {
 				}
 			</style>
 		</head>
-		<body class="font-custom text-gray-800 bg-gradient-to-b from-blue-200 to-blue-400 dark:text-gray-50 dark:bg-gray-800 dark:from-indigo-900 dark:to-slate-900">
+		<body class="font-custom text-gray-800 dark:text-gray-50 dark:bg-gray-900 bg-gray-100">
 			<div id="content">
 				<div class="top-0 sticky w-full">
 					<header x-data="{open: false}" class="p-4 backdrop-filter backdrop-blur-md font-mono">
 						<div class="container mx-auto flex justify-between items-center">
 							<h1 class="text-xl sm:text-3xl font-bold hover:scale-110 transition-all"><a href="/">Niklas Treml</a></h1>
 							<nav>
-								<a href="mailto:treml.niklas@gmail.com" class="hidden sm:inline hover:underline ml-3 p-2 transition-all border border-green-400 shadow-lg">1. Contact</a>
+								<a href="mailto:treml.niklas@gmail.com" class="hidden sm:inline hover:underline ml-3 p-2 transition-all border border-orange-400 shadow-lg">1. Contact</a>
 								<a href="/projects.html" class="hidden sm:inline hover:underline ml-3">2. Projects</a>
 								<a href="https://github.com/NiklasTreml" class="hidden sm:inline hover:underline ml-3">3. Github</a>
 								<button class="sm:hidden" @click="open = ! open">
