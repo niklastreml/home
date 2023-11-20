@@ -21,9 +21,9 @@ templ Layout(children templ.Component) {
 		<body class="font-custom text-gray-800 dark:text-gray-50 dark:bg-gray-900 bg-gray-100">
 			<div id="content">
 				<div class="top-0 sticky w-full z-50">
-					<header x-data="{open: false}" class="p-4 backdrop-filter backdrop-blur-md font-mono">
+					<header x-data="{open: false}" class="p-4 backdrop-filter backdrop-blur-md">
 						<div class="container mx-auto flex justify-between items-center">
-							<h1 class="text-2xl md:text-4xl sm:text-3xl font-bold hover:scale-110 transition-all"><a href="/">Niklas Treml</a></h1>
+							<h1 class="text-2xl md:text-4xl sm:text-3xl font-bold hover:scale-110 transition-all font-mono"><a href="/">Niklas Treml</a></h1>
 							<nav>
 								<a href="mailto:treml.niklas@gmail.com" class="hidden sm:inline hover:underline ml-3 p-2 transition-all border border-orange-400 shadow-lg">1. Contact</a>
 								<a href="/projects.html" class="hidden sm:inline hover:underline ml-3">2. Projects</a>
@@ -34,11 +34,11 @@ templ Layout(children templ.Component) {
 							</nav>
 							<div x-show="open" @click="open = false" class="h-screen w-screen absolute text-left top-0 left-0">
 								<div class="flex flex-row h-full">
-									<div class="h-full bg-slate-900 opacity-75 w-1/2 "></div>
-									<div class="h-full bg-slate-300 dark:bg-gray-800 w-1/2 text-2xl pl-5">
-										<div class="mt-5 border-b"><a href="mailto:treml.niklas@gmail.com">1. Contact</a></div>
-										<div class="mt-5 border-b"><a href="/projects.html">2. Projects</a></div>
-										<div class="mt-5 border-b"><a href="https://github.com/NiklasTreml">3. Github</a></div>
+									<div class="h-full bg-slate-900 opacity-75 w-1/2"></div>
+									<div class="h-full bg-slate-200 dark:bg-slate-800 w-1/2 text-2xl pl-5">
+										<a class="block mt-5 mx-5 active:scale-95 hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded-lg" href="mailto:treml.niklas@gmail.com">1. Contact</a>
+										<a class="block mt-5 mx-5 active:scale-95 hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded-lg" href="/projects.html">2. Projects</a>
+										<a class="block mt-5 mx-5 active:scale-95 hover:bg-gray-100 dark:hover:bg-gray-700 p-2 rounded-lg" href="https://github.com/NiklasTreml">3. Github</a>
 									</div>
 								</div>
 							</div>
