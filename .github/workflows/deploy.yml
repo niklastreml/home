@@ -17,7 +17,7 @@ jobs:
 
         run: |
           go mod download
-          go install github.com/a-h/templ/cmd/templ@latest
+          go install github.com/a-h/templ/cmd/templ@v0.2.432
           templ generate
           go run ./cmd/generate
           ls -la tmp/build
