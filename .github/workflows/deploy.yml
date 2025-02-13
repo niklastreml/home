@@ -22,7 +22,7 @@ jobs:
           go run ./cmd/generate
           ls -la tmp/build
       - name: Upload artifacts
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
           path: tmp/build/
 
